@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'greenn.lab.study'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // import a BOM
+    implementation platform('io.projectreactor:reactor-bom:2020.0.14')
+
+    // define dependencies without versions
+    implementation 'io.projectreactor.netty:reactor-netty-core'
+    implementation 'io.projectreactor.netty:reactor-netty-http'
+}
